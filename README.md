@@ -8,9 +8,9 @@ A lightweight, web-based Human Resource Management System that allows an admin t
 
 | Service | URL |
 |---|---|
-| Frontend | `https://your-app.vercel.app` |
-| Backend API | `https://your-app.onrender.com` |
-| API Docs | `https://your-app.onrender.com/docs` |
+| **Frontend** | https://hrms-lite-management-system.vercel.app |
+| **Backend API** | https://hrms-lite-backend-nfs2.onrender.com |
+| **API Docs** | https://hrms-lite-backend-nfs2.onrender.com/docs |
 
 > ⚠️ The backend is hosted on Render's free tier. It may take **20–30 seconds** to wake up on the first request.
 
@@ -72,7 +72,7 @@ HRMS Lite is a full-stack internal HR tool built for a single admin user. It cov
 ## 📁 Project Structure
 
 ```
-hrms-lite/
+hrms-lite-management-system/
 ├── hrms-lite-backend/
 │   ├── app/
 │   │   ├── main.py              # FastAPI app entry point
@@ -89,7 +89,7 @@ hrms-lite/
 │   ├── requirements.txt
 │   └── .gitignore
 │
-└── hrms-lite-frontend/
+└── frontend/
     ├── src/
     │   ├── api/api.ts            # Axios instance
     │   ├── components/
@@ -118,8 +118,9 @@ hrms-lite/
 ### Backend Setup
 
 ```bash
-# 1. Navigate to backend folder
-cd hrms-lite-backend
+# 1. Clone the repository
+git clone https://github.com/pratikdevelop/hrms-lite-management-system.git
+cd hrms-lite-management-system/hrms-lite-backend
 
 # 2. Create and activate virtual environment
 python -m venv venv
@@ -147,8 +148,8 @@ DB_NAME=hrms_db
 uvicorn app.main:app --reload
 ```
 
-Backend runs at: `http://127.0.0.1:8000`
-API Docs at: `http://127.0.0.1:8000/docs`
+- Backend runs at: `http://127.0.0.1:8000`
+- API Docs at: `http://127.0.0.1:8000/docs`
 
 ---
 
@@ -156,7 +157,7 @@ API Docs at: `http://127.0.0.1:8000/docs`
 
 ```bash
 # 1. Navigate to frontend folder
-cd hrms-lite-frontend
+cd hrms-lite-management-system/frontend
 
 # 2. Install dependencies
 npm install
@@ -197,9 +198,9 @@ Frontend runs at: `http://localhost:5173`
 
 ## ✅ Bonus Features Implemented
 
-- **Filter attendance records** — by employee via dropdown
-- **Total present days per employee** — shown in dashboard summary table
-- **Dashboard summary** — stat cards, overall attendance rate bar, per-employee breakdown
+- **Filter attendance records** — by employee via dropdown in the Attendance page
+- **Total present days per employee** — shown in the Dashboard summary table per employee
+- **Dashboard summary** — stat cards, overall attendance rate progress bar, per-employee breakdown table
 
 ---
 
@@ -207,7 +208,7 @@ Frontend runs at: `http://localhost:5173`
 
 - **Single admin user** — no authentication or login is implemented as per assignment scope
 - **No role management** — all operations are accessible without any permissions
-- **Free tier cold start** — Render's free tier spins down after inactivity. The first API request may take 20–30 seconds
+- **Free tier cold start** — Render's free tier spins down after inactivity. The first API request may take 20–30 seconds. Please wait and refresh if the app appears slow on first load
 - **Department field is free text** — no predefined department list; admin can enter any department name
 - **Attendance is not restricted by date** — admin can mark attendance for any past or future date
 - **No edit functionality** — employees and attendance records can only be added or deleted, not edited, as per assignment scope
