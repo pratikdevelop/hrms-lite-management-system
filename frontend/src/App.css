@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  @apply bg-gray-100;
+}
+*{
+    font-family: "Roboto", sans-serif !important;
+  font-optical-sizing: auto !important;
+font-weight: 500 !important;
+font-style: normal !important;
+  font-variation-settings:
+    "wdth" 100 !important;
+}
